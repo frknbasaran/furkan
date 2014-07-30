@@ -15,6 +15,10 @@ friend-driven nextgen JavaScript Framework
 
 this about damn fuckin' good!
 
+## Usage
+
+      you know nothing jon snow, dont be stupid!
+
 ## Future Tasks
 
 - [ ] **Skeleton Construction Design**
