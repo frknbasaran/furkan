@@ -23,6 +23,6 @@ this about damn fuckin' good!
 
 ## License
 
-Released under the MIT license.
-Copyright &copy; 2014, Eray Arslan ( <relfishere@gmail.com> - <http://www.erayarslan.com> )
-All rights reserved.
+      Released under the MIT license.
+      Copyright &copy; 2014, Eray Arslan ( <relfishere@gmail.com> - <http://www.erayarslan.com> )
+      All rights reserved.
