@@ -7,9 +7,9 @@
                                       /_/   _/ |    
                                            |__/     
 
-# furkanJS v0.0.1
+# furkan :) js
 
-friend-driven JavaScript Framework
+friend-driven nextgen JavaScript Framework
 
 ## About
 
@@ -24,5 +24,5 @@ this about damn fuckin' good!
 ## License
 
       Released under the MIT license.
-      Copyright &copy; 2014, Eray Arslan ( <relfishere@gmail.com> - <http://www.erayarslan.com> )
-      All rights reserved.
+      Copy'left' 2014, Eray Arslan ( <relfishere@gmail.com> - <http://www.erayarslan.com> )
+      All rights fuckin' reserved.
