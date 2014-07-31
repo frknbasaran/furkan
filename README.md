@@ -1,14 +1,9 @@
-                                                                          
-          ,...                                                       ,,         
-        .d' ""                 `7MM                                  db         
-        dM`                      MM                                             
-       mMMmm`7MM  `7MM  `7Mb,od8 MM  ,MP' ,6"Yb.  `7MMpMMMb.       `7MM ,pP"Ybd 
-        MM    MM    MM    MM' "' MM ;Y   8)   MM    MM    MM         MM 8I   `" 
-        MM    MM    MM    MM     MM;Mm    ,pm9MM    MM    MM         MM `YMMMa. 
-        MM    MM    MM    MM     MM `Mb. 8M   MM    MM    MM         MM L.   I8 
-      .JMML.  `Mbod"YML..JMML. .JMML. YA.`Moo9^Yo..JMML  JMML.       MM M9mmmP' 
-                                                                  QO MP         
-                                                                  `bmP          
+                                                                            _____             __                         __        
+                                                                          _/ ____\_ _________|  | _______    ____       |__| ______
+                                                                          \   __\  |  \_  __ \  |/ /\__  \  /    \      |  |/  ___/
+                                                                           |  | |  |  /|  | \/    <  / __ \|   |  \     |  |\___ \ 
+                                                                           |__| |____/ |__|  |__|_ \(____  /___|  / /\__|  /____  >
+                                                                                                  \/     \/     \/  \______|    \/ 
 
 # furkan :) js
 
