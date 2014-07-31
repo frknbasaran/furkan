@@ -1,3 +1,5 @@
+![Logo](http://s27.postimg.org/pn9s7wz1f/super.png)
+
 # furkan.js
 
 friend-driven nextgen JavaScript Framework
