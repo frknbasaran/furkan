@@ -8,6 +8,12 @@ friend-driven nextgen JavaScript Framework
 
 this about damn fuckin' good!
 
+## Build
+
+```
+npm run-script build
+```
+
 ## Usage
 
       you know nothing jon snow, dont be stupid!
