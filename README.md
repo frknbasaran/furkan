@@ -1,11 +1,14 @@
-      __            _                 __      _     
-     / _|          | |                \ \    (_)    
-    | |_ _   _ _ __| | ____ _ _ __   (_) |    _ ___ 
-    |  _| | | | '__| |/ / _` | '_ \    | |   | / __|
-    | | | |_| | |  |   < (_| | | | |  _| |   | \__ \
-    |_|  \__,_|_|  |_|\_\__,_|_| |_| (_) |   | |___/
-                                      /_/   _/ |    
-                                           |__/     
+                                                                          
+          ,...                                                       ,,         
+        .d' ""                 `7MM                                  db         
+        dM`                      MM                                             
+       mMMmm`7MM  `7MM  `7Mb,od8 MM  ,MP' ,6"Yb.  `7MMpMMMb.       `7MM ,pP"Ybd 
+        MM    MM    MM    MM' "' MM ;Y   8)   MM    MM    MM         MM 8I   `" 
+        MM    MM    MM    MM     MM;Mm    ,pm9MM    MM    MM         MM `YMMMa. 
+        MM    MM    MM    MM     MM `Mb. 8M   MM    MM    MM         MM L.   I8 
+      .JMML.  `Mbod"YML..JMML. .JMML. YA.`Moo9^Yo..JMML  JMML.       MM M9mmmP' 
+                                                                  QO MP         
+                                                                  `bmP          
 
 # furkan :) js
 
