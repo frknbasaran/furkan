@@ -8,6 +8,12 @@ friend-driven nextgen JavaScript Framework
 
 this about damn fuckin' good!
 
+## Install
+
+```
+npm install furkan
+```
+
 ## Build
 
 ```
