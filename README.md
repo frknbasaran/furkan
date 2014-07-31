@@ -1,4 +1,4 @@
-![Logo](http://s27.postimg.org/pn9s7wz1f/super.png)
+![Logo](http://s22.postimg.org/6xx3msko1/super2.png)
 
 # furkan.js
 
