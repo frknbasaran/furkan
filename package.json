@@ -1,0 +1,17 @@
+{
+    "name"          : "furkan",
+    "description"   : "friend-driven nextgen JavaScript framework",
+    "url"           : "http://erayarslan.com",
+    "keywords"      : ["cute", "sexy", "baby", "face", "honey", "love", "damn"],
+    "author"        : "Eray Arslan <relfishere@gmail.com>",
+    "scripts": {
+        "build": "uglifyjs furkan.js --mangle --source-map furkan.min.js.map -o furkan.min.js"
+    },
+    "main"          : "furkan.js",
+    "version"       : "0.0.1",
+    "license"       : "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/erayarslan/furkan"
+    }
+}
