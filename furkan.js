@@ -29,6 +29,8 @@
 
     Furkan.NAME = "Furkan";
 
+    Furkan.ERAY = "fuckin\'";
+
     Furkan.YES = 1;
 
     Furkan.NO = 0;
@@ -42,6 +44,21 @@
     };
 
     Furkan.say = function(text) {
+        if(text.toLowerCase() == "hi") {
+            throw new Error(
+                    Furkan.NAME+
+                    Furkan.SPACE+
+                    'dont'+
+                    Furkan.SPACE+
+                    'apply'+
+                    Furkan.SPACE+
+                    Furkan.ERAY+
+                    Furkan.SPACE+
+                    'this'+
+                    Furkan.SPACE+
+                    'text!'
+            );
+        }
         return text + Furkan.SPACE + Furkan.NAME;
     }
 
