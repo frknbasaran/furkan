@@ -16,17 +16,24 @@ this about damn fuckin' good!
 
 ##### whoami method
 ```javascript
-whoami(); // "Furkan"
+Furkan.whoami(); // "Furkan"
 ```
 
 ##### say method
 ```javascript
-say("stfu"); // "stfu Furkan"
+Furkan.say("stfu"); // "stfu Furkan"
 ```
 
 ##### amicute method
 ```javascript
-amicute(); // 1 or (true)
+Furkan.amicute(); // 1 or (true)
+```
+
+## Extending
+
+```javascript
+var furki = Furkan.extend({ NAME : "Furki" });
+furki.NAME // "furki"
 ```
 
 ## Browser Support
