@@ -18,6 +18,23 @@ this about damn fuckin' good!
 ## Usage
 
       you know nothing jon snow, dont be stupid!
+      
+## API Docs
+
+##### whoami method
+```javascript
+whoami(); // "Furkan"
+```
+
+##### say method
+```javascript
+say("stfu"); // "stfu Furkan"
+```
+
+##### amicute method
+```javascript
+amicute(); // 1 or (true)
+```
 
 ## Browser Support
 
