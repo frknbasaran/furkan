@@ -60,11 +60,33 @@
             );
         }
         return text + Furkan.SPACE + Furkan.NAME;
-    }
+    };
 
     Furkan.amicute = function() {
         return Furkan.YES;
-    }
+    };
+
+    Furkan.extend = function(args) {
+        function clone(obj){
+            if(obj == null || typeof(obj) != 'object')
+                return obj;
+            var temp = obj.constructor();
+            for(var key in obj)
+                temp[key] = clone(obj[key]);
+            return temp;
+        }
+
+        function extend (target, source) {
+            target = target || {};
+            for (var prop in source) {
+                if (typeof source[prop] === 'object') {
+                    target[prop] = extend(target[prop], source[prop]);
+                } else { target[prop] = source[prop]; }
+            } return target;
+        }
+
+        return extend(clone(Furkan),args);
+    };
 
     return Furkan;
 
