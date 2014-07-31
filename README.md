@@ -44,9 +44,9 @@ furki.NAME // "furki"
 
 ## Future Tasks
 
-- [ ] **Skeleton Construction Design**
-- [ ] Apply Temporary System
-- [ ] And more fuckin' development processes (best part)
+- [x] Skeleton Construction Design
+- [x] Apply Temporary System
+- [ ] **And more fuckin' development processes (best part)**
 
 ## Contributing
 
