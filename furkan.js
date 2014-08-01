@@ -25,7 +25,7 @@
 
 }(this, function(root, Furkan) {
 
-    Furkan.VERSION = "0.0.1";
+    Furkan.VERSION = "0.0.2";
 
     Furkan.NAME = "Furkan";
 
