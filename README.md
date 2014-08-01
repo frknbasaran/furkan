@@ -62,6 +62,21 @@ Furkan.mood(); // "fuckin\'" || ":*" || "hi"
 Furkan.status(); // "Single"
 ```
 
+##### addSelfie method
+```javascript
+Furkan.addSelfie(/* GitHub User Profile JSON Data */); // undefined
+```
+
+##### giffMe method
+```javascript
+Furkan.giffMe(); // "Furkan" (variable name)
+```
+
+##### show method
+```javascript
+Furkan.show(/* target element node (example: document.getElementsByTagName('body')[0])  */); // undefined
+```
+
 ## Extending
 
 ```javascript

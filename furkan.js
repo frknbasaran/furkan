@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.0.6";
+    Furkan.VERSION = "0.0.7";
 
     Furkan.NAME = "Furkan";
 
@@ -46,6 +46,8 @@
     Furkan.HAPPY = 0;
 
     Furkan.RELATIONSHIP = "Single";
+
+    Furkan.SELFIE = undefined;
 
     Furkan.kiss = function() {
         this.HAPPY++;
@@ -95,6 +97,29 @@
 
     Furkan.amicute = function() {
         return this.YES;
+    };
+
+    Furkan.addSelfie = function(r) {
+        var img = document.createElement('img');
+        img.src = r.data.avatar_url;
+        this.SELFIE.appendChild(img);
+
+        return undefined;
+    }
+
+    Furkan.giffMe = function() {
+        for (var name in window)
+            if (window[name] === this)
+                return name;
+    }
+
+    Furkan.show = function(n) {
+        this.SELFIE = n;
+        var script = document.createElement('script');
+        script.src = 'https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie';
+
+        document.getElementsByTagName('head')[0].appendChild(script);
+        return undefined;
     };
 
     var Dolly = function () {
