@@ -25,7 +25,7 @@
 
 }(this, function(root, Furkan) {
 
-    Furkan.VERSION = "0.0.3";
+    Furkan.VERSION = "0.0.4";
 
     Furkan.NAME = "Furkan";
 
@@ -40,52 +40,74 @@
     Furkan.SPACE = " ";
 
     Furkan.whoami = function() {
-        return Furkan.NAME;
+        return this.NAME;
     };
 
     Furkan.say = function(text) {
         if(text.toLowerCase() == "hi") {
             throw new Error(
-                    Furkan.NAME+
-                    Furkan.SPACE+
+                    this.NAME+
+                    this.SPACE+
                     'dont'+
-                    Furkan.SPACE+
+                    this.SPACE+
                     'apply'+
-                    Furkan.SPACE+
-                    Furkan.ERAY+
-                    Furkan.SPACE+
+                    this.SPACE+
+                    this.ERAY+
+                    this.SPACE+
                     'this'+
-                    Furkan.SPACE+
+                    this.SPACE+
                     'text!'
             );
         }
-        return text + Furkan.SPACE + Furkan.NAME;
+        return text + this.SPACE + this.NAME;
     };
 
     Furkan.amicute = function() {
-        return Furkan.YES;
+        return this.YES;
     };
 
+    Furkan.clone = function () {
+        var options, name, src, copy, copyIsArray, clone, target = arguments[0] || {}, i = 1, length = arguments.length, deep = false;
+        if ( typeof target === "boolean" ) {
+            deep = target;
+            target = arguments[ i ] || {};
+            i++;
+        }
+        if ( typeof target !== "object" && !(Object.prototype.toString.call( target ) === '[object Function]') ) {
+            target = {};
+        }
+        if ( i === length ) {
+            target = this;
+            i--;
+        }
+        for ( ; i < length; i++ ) {
+            if ( (options = arguments[ i ]) != null ) {
+                for ( name in options ) {
+                    src = target[ name ];
+                    copy = options[ name ];
+                    if ( target === copy ) {
+                        continue;
+                    }
+                    if ( deep && copy && ( (copy.toString()==="[object Object]") ||
+                        (copyIsArray = (Object.prototype.toString.call( copy ) === '[object Array]')) ) ) {
+                        if ( copyIsArray ) {
+                            copyIsArray = false;
+                            clone = src && (Object.prototype.toString.call( src ) === '[object Array]') ? src : [];
+
+                        } else {
+                            clone = src && (src.toString()==="[object Object]") ? src : {};
+                        }
+                        target[ name ] = this.clone( deep, clone, copy );
+                    } else if ( copy !== undefined ) {
+                        target[ name ] = copy;
+                    }
+                }
+            }
+        } return target;
+    }
+
     Furkan.extend = function(args) {
-        function clone(obj){
-            if(obj == null || (typeof(obj) != 'object' || typeof(obj) != 'function'))
-                return obj;
-            var temp = obj.constructor();
-            for(var key in obj)
-                temp[key] = clone(obj[key]);
-            return temp;
-        }
-
-        function extend (target, source) {
-            target = target || {};
-            for (var prop in source) {
-                if (typeof source[prop] === 'object') {
-                    target[prop] = extend(target[prop], source[prop]);
-                } else { target[prop] = source[prop]; }
-            } return target;
-        }
-
-        return extend(clone(Furkan),args);
+        return this.clone(true,this.clone(true, {}, Furkan),args);
     };
 
     return Furkan;
