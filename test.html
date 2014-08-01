@@ -2,7 +2,7 @@
 <script>
     document.write("<h1>Bullshit Test Journey#</h1>");
     document.write("<hr>")
-    var totalTest = 5;
+    var totalTest = 8;
     var passedTest = 0;
 
     // whoami test
@@ -42,6 +42,23 @@
 
     if(furkiTest.whoami()==="furki" && Furkan.whoami()==="Furkan") {
         document.write("Extend test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // status test
+    if(Furkan.status() === "Single") {
+        document.write("Status test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // kiss test
+    if(Furkan.kiss() === ":*") {
+        document.write("Kiss test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // mood test
+    Furkan.HAPPY = 0;
+    Furkan.kiss();
+    if(Furkan.mood()===":*") {
+        document.write("Mood test passed! <br>");
         passedTest = passedTest + 1;
     }
     // result
