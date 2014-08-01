@@ -25,7 +25,7 @@
 
 }(this, function(root, Furkan) {
 
-    Furkan.VERSION = "0.0.4";
+    Furkan.VERSION = "0.0.5";
 
     Furkan.NAME = "Furkan";
 
@@ -66,7 +66,7 @@
         return this.YES;
     };
 
-    Furkan.clone = function () {
+    var Dolly = function () {
         var options, name, src, copy, copyIsArray, clone, target = arguments[0] || {}, i = 1, length = arguments.length, deep = false;
         if ( typeof target === "boolean" ) {
             deep = target;
@@ -97,7 +97,7 @@
                         } else {
                             clone = src && (src.toString()==="[object Object]") ? src : {};
                         }
-                        target[ name ] = this.clone( deep, clone, copy );
+                        target[ name ] = Dolly( deep, clone, copy );
                     } else if ( copy !== undefined ) {
                         target[ name ] = copy;
                     }
@@ -107,7 +107,7 @@
     }
 
     Furkan.extend = function(args) {
-        return this.clone(true,this.clone(true, {}, Furkan),args);
+        return Dolly(true,Dolly(true, {}, Furkan),args);
     };
 
     return Furkan;
