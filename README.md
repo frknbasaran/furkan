@@ -20,6 +20,12 @@ npm install furkan
 npm run-script build
 ```
 
+## Test
+
+```
+test.html // u know dude!
+```
+
 ## Usage
 
       you know nothing jon snow, dont be stupid!

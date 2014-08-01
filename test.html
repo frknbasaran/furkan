@@ -1,0 +1,50 @@
+<script src="furkan.min.js"></script>
+<script>
+    document.write("<h1>Bullshit Test Journey#</h1>");
+    document.write("<hr>")
+    var totalTest = 5;
+    var passedTest = 0;
+
+    // whoami test
+    var whoami = Furkan.whoami();
+
+    if(whoami==="Furkan") {
+        document.write("Who am I test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // say test
+    var say = Furkan.say("mrb");
+
+    if(say=="mrb Furkan") {
+        document.write("Say test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+
+    try {
+        var say2 = Furkan.say("hi")
+    } catch (e) {
+        if(e.message==="Furkan dont apply fuckin' this text!") {
+            document.write("Say test 2 passed! <br>");
+            passedTest = passedTest + 1;
+        }
+    }
+    // amicute test
+    var amicute = Furkan.amicute();
+
+    if(amicute==1 && amicute==true) {
+        document.write("Am I cute test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // extend test
+    var furkiTest = Furkan.extend({
+        NAME : "furki"
+    });
+
+    if(furkiTest.whoami()==="furki") {
+        document.write("Extend test passed! <br>");
+        passedTest = passedTest + 1;
+    }
+    // result
+    document.write("<hr>");
+    document.write("<u>%"+(100/totalTest)*passedTest + "</u> success finished!");
+</script>
