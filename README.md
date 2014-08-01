@@ -47,6 +47,21 @@ Furkan.say("stfu"); // "stfu Furkan"
 Furkan.amicute(); // 1 or (true)
 ```
 
+##### kiss method
+```javascript
+Furkan.kiss(); // :*
+```
+
+##### mood method
+```javascript
+Furkan.mood(); // "fuckin\'" || ":*" || "hi"
+```
+
+##### status method
+```javascript
+Furkan.status(); // "Single"
+```
+
 ## Extending
 
 ```javascript

@@ -25,7 +25,9 @@
 
 }(this, function(root, Furkan) {
 
-    Furkan.VERSION = "0.0.5";
+    var BAD_ASS = "hi";
+
+    Furkan.VERSION = "0.0.6";
 
     Furkan.NAME = "Furkan";
 
@@ -39,12 +41,41 @@
 
     Furkan.SPACE = " ";
 
+    Furkan.LIP = ":*";
+
+    Furkan.HAPPY = 0;
+
+    Furkan.RELATIONSHIP = "Single";
+
+    Furkan.kiss = function() {
+        this.HAPPY++;
+        return this.LIP;
+    };
+
     Furkan.whoami = function() {
         return this.NAME;
     };
 
+    Furkan.status = function() {
+        return this.RELATIONSHIP;
+    }
+
+    Furkan.mood = function() {
+        var tempHappy = this.HAPPY;
+        if(tempHappy == 0) {
+            return this.ERAY;
+        } else if(tempHappy>0 && tempHappy<4) {
+            return this.LIP;
+        } else {
+            return BAD_ASS;
+        }
+    }
+
     Furkan.say = function(text) {
-        if(text.toLowerCase() == "hi") {
+        if(text.toLowerCase() == BAD_ASS) {
+            if(this.HAPPY-1!=-1) {
+                this.HAPPY--;
+            }
             throw new Error(
                     this.NAME+
                     this.SPACE+
@@ -107,6 +138,7 @@
     }
 
     Furkan.extend = function(args) {
+        this.HAPPY--;
         return Dolly(true,Dolly(true, {}, Furkan),args);
     };
 
