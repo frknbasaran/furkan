@@ -68,7 +68,7 @@
 
     Furkan.extend = function(args) {
         function clone(obj){
-            if(obj == null || typeof(obj) != 'object')
+            if(obj == null || (typeof(obj) != 'object' || typeof(obj) != 'function'))
                 return obj;
             var temp = obj.constructor();
             for(var key in obj)
