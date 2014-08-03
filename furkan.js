@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.0.7";
+    Furkan.VERSION = "0.0.8";
 
     Furkan.NAME = "Furkan";
 
@@ -53,6 +53,11 @@
         this.HAPPY++;
         return this.LIP;
     };
+
+    Furkan.love = function() {
+        this.HAPPY--;
+        throw new Error("No Way Pointer Exception");
+    }
 
     Furkan.whoami = function() {
         return this.NAME;
@@ -119,6 +124,9 @@
         script.src = 'https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie';
 
         document.getElementsByTagName('head')[0].appendChild(script);
+
+        this.HAPPY++;this.HAPPY++;this.HAPPY++;
+
         return undefined;
     };
 
