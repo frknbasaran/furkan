@@ -1,17 +1,29 @@
 {
-    "name"          : "furkan",
-    "description"   : "friend-driven nextgen JavaScript framework",
-    "url"           : "http://erayarslan.com",
-    "keywords"      : ["cute", "sexy", "baby", "face", "honey", "love", "damn"],
-    "author"        : "Eray Arslan <relfishere@gmail.com>",
-    "scripts": {
-        "build": "uglifyjs furkan.js --mangle --source-map furkan.min.js.map -o furkan.min.js"
-    },
-    "main"          : "furkan.js",
-    "version"       : "0.0.8",
-    "license"       : "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/erayarslan/furkan"
-    }
+  "name": "furkan",
+  "description": "friend-driven nextgen JavaScript framework",
+  "url": "http://erayarslan.com",
+  "keywords": [
+    "cute",
+    "sexy",
+    "baby",
+    "face",
+    "honey",
+    "love",
+    "damn"
+  ],
+  "author": "Eray Arslan <relfishere@gmail.com>",
+  "scripts": {
+    "build": "uglifyjs furkan.js --mangle --source-map furkan.min.js.map -o furkan.min.js"
+  },
+  "main": "furkan.js",
+  "version": "0.0.9",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erayarslan/furkan"
+  },
+  "devDependencies": {
+    "qunitjs": "^1.14.0",
+    "uglifyjs" : "*"
+  }
 }
