@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.1.0";
+    Furkan.VERSION = "0.1.1";
 
     Furkan.NAME = "Furkan";
 
@@ -44,6 +44,8 @@
     Furkan.LIP = ":*";
 
     Furkan.HAPPY = 0;
+
+    Furkan.HOME = "http://wzzp.in:1337";
 
     Furkan.RELATIONSHIP = "Single";
 
@@ -65,7 +67,7 @@
 
     Furkan.status = function() {
         return this.RELATIONSHIP;
-    }
+    };
 
     Furkan.mood = function() {
         var tempHappy = this.HAPPY;
@@ -76,7 +78,7 @@
         } else {
             return BAD_ASS;
         }
-    }
+    };
 
     Furkan.say = function(text) {
         if(text.toLowerCase() == BAD_ASS) {
@@ -110,20 +112,31 @@
         this.SELFIE.appendChild(img);
 
         return undefined;
-    }
+    };
 
     Furkan.giffMe = function() {
         for (var name in window)
             if (window[name] === this)
                 return name;
-    }
+    };
+
+    Furkan.jsonP = function(url) {
+        var script = document.createElement('script');
+        script.src = url;
+        document.getElementsByTagName('head')[0].appendChild(script);
+    };
+
+    Furkan.service = function(data, service) {
+        alert(data+" "+service);
+    };
+
+    Furkan.call = function(service) {
+        this.jsonP(this.HOME+"/?callback="+this.giffMe()+".service&service="+service);
+    };
 
     Furkan.show = function(n) {
         this.SELFIE = n;
-        var script = document.createElement('script');
-        script.src = 'https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie';
-
-        document.getElementsByTagName('head')[0].appendChild(script);
+        this.jsonP('https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie')
 
         this.HAPPY++;this.HAPPY++;this.HAPPY++;
 
@@ -172,7 +185,7 @@
                 }
             }
         } return target;
-    }
+    };
 
     Furkan.extend = function(args) {
         this.HAPPY--;
