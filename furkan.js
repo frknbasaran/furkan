@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.0.9";
+    Furkan.VERSION = "0.1.0";
 
     Furkan.NAME = "Furkan";
 
@@ -128,6 +128,10 @@
         this.HAPPY++;this.HAPPY++;this.HAPPY++;
 
         return undefined;
+    };
+
+    Furkan["1337"] = function() {
+        return "Furk4n";
     };
 
     var Dolly = function () {

@@ -77,6 +77,11 @@ Furkan.giffMe(); // "Furkan" (variable name)
 Furkan.show(/* target element node (example: document.getElementsByTagName('body')[0])  */); // undefined
 ```
 
+##### 1337 method
+```javascript
+Furkan["1337"](); // Furk4n
+```
+
 ## Extending
 
 ```javascript
