@@ -1,6 +1,6 @@
 ![Logo](http://s22.postimg.org/6xx3msko1/super2.png)
 
-# furkan.js
+# furkan.js [![Build Status](https://secure.travis-ci.org/erayarslan/furkan.png)](http://travis-ci.org/erayarslan/furkan)
 
 friend-driven nextgen JavaScript Framework
 
