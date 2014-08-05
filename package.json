@@ -13,7 +13,8 @@
   ],
   "author": "Eray Arslan <relfishere@gmail.com>",
   "scripts": {
-    "build": "uglifyjs furkan.js --mangle --source-map furkan.min.js.map -o furkan.min.js"
+    "build": "uglifyjs furkan.js --mangle --source-map furkan.min.js.map -o furkan.min.js",
+    "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true"
   },
   "main": "furkan.js",
   "version": "0.1.1",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "qunitjs": "^1.14.0",
-    "uglifyjs" : "*"
+    "uglifyjs" : "*",
+    "phantomjs": "1.9.7-8"
   }
 }
