@@ -1,4 +1,8 @@
-![Logo](http://s22.postimg.org/6xx3msko1/super2.png)
+![Logo](http://33.media.tumblr.com/8b8da2e0af02249bb6db82ca7574151f/tumblr_mv8lqejz8e1r413h3o1_250.jpg)
+
+<!---
+http://s22.postimg.org/6xx3msko1/super2.png
+-->
 
 # furkan.js [![Build Status](https://secure.travis-ci.org/erayarslan/furkan.png)](http://travis-ci.org/erayarslan/furkan) [![NPM Download Count](http://img.shields.io/npm/dm/furkan.png)](https://www.npmjs.org/package/furkan) [![Code Climate](https://codeclimate.com/github/erayarslan/furkan/badges/gpa.png)](https://codeclimate.com/github/erayarslan/furkan)
 
