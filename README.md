@@ -1,6 +1,6 @@
 ![Logo](http://s22.postimg.org/6xx3msko1/super2.png)
 
-# furkan.js [![Build Status](https://secure.travis-ci.org/erayarslan/furkan.png)](http://travis-ci.org/erayarslan/furkan)
+# furkan.js [![Build Status](https://secure.travis-ci.org/erayarslan/furkan.png)](http://travis-ci.org/erayarslan/furkan) [![NPM Download Count](http://img.shields.io/npm/dm/furkan.png)](https://www.npmjs.org/package/furkan) [![Code Climate](https://codeclimate.com/github/erayarslan/furkan/badges/gpa.png)](https://codeclimate.com/github/erayarslan/furkan)
 
 friend-driven nextgen JavaScript Framework
 
@@ -108,12 +108,6 @@ furki.NAME // "furki"
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## Badges
-
-[![NPM Download Count](http://img.shields.io/npm/dm/furkan.png)](https://www.npmjs.org/package/furkan)
-
-[![Code Climate](https://codeclimate.com/github/erayarslan/furkan/badges/gpa.png)](https://codeclimate.com/github/erayarslan/furkan)
 
 ## License
 
