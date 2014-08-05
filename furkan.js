@@ -1,4 +1,4 @@
-//     furkan.js 0.0.1
+//     furkan.js 0.1.2
 
 //     (c) 2014-fuckin' ever Eray Arslan
 //     furkan(person) may be freely distributed under the MIT license.
