@@ -1,4 +1,4 @@
-//     furkan.js 0.1.2
+//     furkan.js 0.1.3
 
 //     (c) 2014-fuckin' ever Eray Arslan
 //     furkan(person) may be freely distributed under the MIT license.
@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.1.2";
+    Furkan.VERSION = "0.1.3";
 
     Furkan.NAME = "Furkan";
 
