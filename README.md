@@ -23,7 +23,7 @@ npm run-script build
 ## Test
 
 ```
-test.html // u know dude!
+npm test
 ```
 
 ## Usage
@@ -108,6 +108,12 @@ furki.NAME // "furki"
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
+
+## Badges
+
+[![NPM Download Count](http://img.shields.io/npm/dm/furkan.png)](https://www.npmjs.org/package/furkan)
+
+[![Code Climate](https://codeclimate.com/github/erayarslan/furkan/badges/gpa.png)](https://codeclimate.com/github/erayarslan/furkan)
 
 ## License
 

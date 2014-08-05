@@ -17,7 +17,7 @@
     "test": "phantomjs test/vendor/runner.js test/index.html?noglobals=true"
   },
   "main": "furkan.js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "repository": {
     "type": "git",

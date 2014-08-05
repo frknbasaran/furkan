@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.1.1";
+    Furkan.VERSION = "0.1.2";
 
     Furkan.NAME = "Furkan";
 
