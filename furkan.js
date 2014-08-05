@@ -1,4 +1,4 @@
-//     furkan.js 0.1.5
+//     furkan.js 0.1.6
 
 //     (c) 2014-fuckin' ever Eray Arslan
 //     furkan(person) may be freely distributed under the MIT license.
@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.1.5";
+    Furkan.VERSION = "0.1.6";
 
     Furkan.NAME = "Furkan";
 
@@ -199,7 +199,7 @@
 
     Furkan.extend = function(args) {
         this.HAPPY--;
-        return new Dolly(true,Dolly(true, {}, Furkan),args);
+        return new Dolly(true,new Dolly(true, {}, Furkan),args);
     };
 
     return Furkan;

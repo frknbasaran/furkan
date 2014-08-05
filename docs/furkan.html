@@ -27,7 +27,7 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <pre><code>furkan.js <span class="hljs-number">0.1</span><span class="hljs-number">.3</span>
+              <pre><code>furkan.js <span class="hljs-number">0.1</span><span class="hljs-number">.6</span>
 </code></pre>
             </div>
             
@@ -70,7 +70,7 @@ For all details and documentation:
 
     <span class="hljs-keyword">var</span> BAD_ASS = <span class="hljs-string">"hi"</span>;
 
-    Furkan.VERSION = <span class="hljs-string">"0.1.3"</span>;
+    Furkan.VERSION = <span class="hljs-string">"0.1.6"</span>;
 
     Furkan.NAME = <span class="hljs-string">"Furkan"</span>;
 
@@ -88,7 +88,7 @@ For all details and documentation:
 
     Furkan.HAPPY = <span class="hljs-number">0</span>;
 
-    Furkan.HOME = <span class="hljs-string">"http://wzzp.in:1337"</span>;
+    Furkan.HOME = <span class="hljs-string">"http://wzzp.in:31"</span>;
 
     Furkan.RELATIONSHIP = <span class="hljs-string">"Single"</span>;
 
@@ -102,7 +102,7 @@ For all details and documentation:
     Furkan.love = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">this</span>.HAPPY--;
         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">"No Way Pointer Exception"</span>);
-    }
+    };
 
     Furkan.whoami = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.NAME;
@@ -114,7 +114,7 @@ For all details and documentation:
 
     Furkan.mood = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
         <span class="hljs-keyword">var</span> tempHappy = <span class="hljs-keyword">this</span>.HAPPY;
-        <span class="hljs-keyword">if</span>(tempHappy == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">if</span>(tempHappy === <span class="hljs-number">0</span>) {
             <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.ERAY;
         } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(tempHappy&gt;<span class="hljs-number">0</span> &amp;&amp; tempHappy&lt;<span class="hljs-number">4</span>) {
             <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.LIP;
@@ -124,8 +124,8 @@ For all details and documentation:
     };
 
     Furkan.say = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(text)</span> </span>{
-        <span class="hljs-keyword">if</span>(text.toLowerCase() == BAD_ASS) {
-            <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.HAPPY-<span class="hljs-number">1</span>!=-<span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">if</span>(text.toLowerCase() === BAD_ASS) {
+            <span class="hljs-keyword">if</span>(<span class="hljs-keyword">this</span>.HAPPY-<span class="hljs-number">1</span>!==-<span class="hljs-number">1</span>) {
                 <span class="hljs-keyword">this</span>.HAPPY--;
             }
             <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(
@@ -158,9 +158,13 @@ For all details and documentation:
     };
 
     Furkan.giffMe = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> name <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>)
-            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>[name] === <span class="hljs-keyword">this</span>)
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> name <span class="hljs-keyword">in</span> <span class="hljs-built_in">window</span>) {
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>[name] === <span class="hljs-keyword">this</span>) {
                 <span class="hljs-keyword">return</span> name;
+            }
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>;
     };
 
     Furkan.jsonP = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(url)</span> </span>{
@@ -170,16 +174,17 @@ For all details and documentation:
     };
 
     Furkan.service = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(data, service)</span> </span>{
-        alert(data+<span class="hljs-string">" "</span>+service);
+        <span class="hljs-keyword">return</span> (data+<span class="hljs-string">" "</span>+service);
     };
 
     Furkan.call = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(service)</span> </span>{
         <span class="hljs-keyword">this</span>.jsonP(<span class="hljs-keyword">this</span>.HOME+<span class="hljs-string">"/?callback="</span>+<span class="hljs-keyword">this</span>.giffMe()+<span class="hljs-string">".service&amp;service="</span>+service);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">undefined</span>;
     };
 
     Furkan.show = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(n)</span> </span>{
         <span class="hljs-keyword">this</span>.SELFIE = n;
-        <span class="hljs-keyword">this</span>.jsonP(<span class="hljs-string">'https://api.github.com/users/frknbasaran?callback='</span>+<span class="hljs-keyword">this</span>.giffMe()+<span class="hljs-string">'.addSelfie'</span>)
+        <span class="hljs-keyword">this</span>.jsonP(<span class="hljs-string">'https://api.github.com/users/frknbasaran?callback='</span>+<span class="hljs-keyword">this</span>.giffMe()+<span class="hljs-string">'.addSelfie'</span>);
 
         <span class="hljs-keyword">this</span>.HAPPY++;<span class="hljs-keyword">this</span>.HAPPY++;<span class="hljs-keyword">this</span>.HAPPY++;
 
@@ -191,13 +196,18 @@ For all details and documentation:
     };
 
     <span class="hljs-keyword">var</span> Dolly = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">var</span> options, name, src, copy, copyIsArray, clone, target = <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>] || {}, i = <span class="hljs-number">1</span>, length = <span class="hljs-built_in">arguments</span>.length, deep = <span class="hljs-literal">false</span>;
+        <span class="hljs-keyword">var</span> options, src, copy, copyIsArray, clone;
+        <span class="hljs-keyword">var</span> target = <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>] || {};
+        <span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">var</span> length = <span class="hljs-built_in">arguments</span>.length;
+        <span class="hljs-keyword">var</span> deep = <span class="hljs-literal">false</span>;
+
         <span class="hljs-keyword">if</span> ( <span class="hljs-keyword">typeof</span> target === <span class="hljs-string">"boolean"</span> ) {
             deep = target;
             target = <span class="hljs-built_in">arguments</span>[ i ] || {};
             i++;
         }
-        <span class="hljs-keyword">if</span> ( <span class="hljs-keyword">typeof</span> target !== <span class="hljs-string">"object"</span> &amp;&amp; !(<span class="hljs-built_in">Object</span>.prototype.toString.call( target ) === <span class="hljs-string">'[object Function]'</span>) ) {
+        <span class="hljs-keyword">if</span> ( <span class="hljs-keyword">typeof</span> target !== <span class="hljs-string">"object"</span> &amp;&amp; <span class="hljs-built_in">Object</span>.prototype.toString.call( target ) !== <span class="hljs-string">'[object Function]'</span> ) {
             target = {};
         }
         <span class="hljs-keyword">if</span> ( i === length ) {
@@ -205,8 +215,8 @@ For all details and documentation:
             i--;
         }
         <span class="hljs-keyword">for</span> ( ; i &lt; length; i++ ) {
-            <span class="hljs-keyword">if</span> ( (options = <span class="hljs-built_in">arguments</span>[ i ]) != <span class="hljs-literal">null</span> ) {
-                <span class="hljs-keyword">for</span> ( name <span class="hljs-keyword">in</span> options ) {
+            <span class="hljs-keyword">if</span> ( (options = <span class="hljs-built_in">arguments</span>[ i ]) !== <span class="hljs-literal">null</span> ) {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> name <span class="hljs-keyword">in</span> options ) {
                     src = target[ name ];
                     copy = options[ name ];
                     <span class="hljs-keyword">if</span> ( target === copy ) {
@@ -221,7 +231,7 @@ For all details and documentation:
                         } <span class="hljs-keyword">else</span> {
                             clone = src &amp;&amp; (src.toString()===<span class="hljs-string">"[object Object]"</span>) ? src : {};
                         }
-                        target[ name ] = Dolly( deep, clone, copy );
+                        target[ name ] = <span class="hljs-keyword">new</span> Dolly( deep, clone, copy );
                     } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ( copy !== <span class="hljs-literal">undefined</span> ) {
                         target[ name ] = copy;
                     }
@@ -232,7 +242,7 @@ For all details and documentation:
 
     Furkan.extend = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(args)</span> </span>{
         <span class="hljs-keyword">this</span>.HAPPY--;
-        <span class="hljs-keyword">return</span> Dolly(<span class="hljs-literal">true</span>,Dolly(<span class="hljs-literal">true</span>, {}, Furkan),args);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Dolly(<span class="hljs-literal">true</span>,<span class="hljs-keyword">new</span> Dolly(<span class="hljs-literal">true</span>, {}, Furkan),args);
     };
 
     <span class="hljs-keyword">return</span> Furkan;
