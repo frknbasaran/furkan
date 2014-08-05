@@ -1,4 +1,4 @@
-//     furkan.js 0.1.4
+//     furkan.js 0.1.5
 
 //     (c) 2014-fuckin' ever Eray Arslan
 //     furkan(person) may be freely distributed under the MIT license.
@@ -27,7 +27,7 @@
 
     var BAD_ASS = "hi";
 
-    Furkan.VERSION = "0.1.4";
+    Furkan.VERSION = "0.1.5";
 
     Furkan.NAME = "Furkan";
 
@@ -59,7 +59,7 @@
     Furkan.love = function() {
         this.HAPPY--;
         throw new Error("No Way Pointer Exception");
-    }
+    };
 
     Furkan.whoami = function() {
         return this.NAME;
@@ -71,7 +71,7 @@
 
     Furkan.mood = function() {
         var tempHappy = this.HAPPY;
-        if(tempHappy == 0) {
+        if(tempHappy === 0) {
             return this.ERAY;
         } else if(tempHappy>0 && tempHappy<4) {
             return this.LIP;
@@ -81,8 +81,8 @@
     };
 
     Furkan.say = function(text) {
-        if(text.toLowerCase() == BAD_ASS) {
-            if(this.HAPPY-1!=-1) {
+        if(text.toLowerCase() === BAD_ASS) {
+            if(this.HAPPY-1!==-1) {
                 this.HAPPY--;
             }
             throw new Error(
@@ -115,9 +115,13 @@
     };
 
     Furkan.giffMe = function() {
-        for (var name in window)
-            if (window[name] === this)
+        for (var name in window) {
+            if (window[name] === this) {
                 return name;
+            }
+        }
+
+        return undefined;
     };
 
     Furkan.jsonP = function(url) {
@@ -127,16 +131,17 @@
     };
 
     Furkan.service = function(data, service) {
-        alert(data+" "+service);
+        return (data+" "+service);
     };
 
     Furkan.call = function(service) {
         this.jsonP(this.HOME+"/?callback="+this.giffMe()+".service&service="+service);
+        return undefined;
     };
 
     Furkan.show = function(n) {
         this.SELFIE = n;
-        this.jsonP('https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie')
+        this.jsonP('https://api.github.com/users/frknbasaran?callback='+this.giffMe()+'.addSelfie');
 
         this.HAPPY++;this.HAPPY++;this.HAPPY++;
 
@@ -148,13 +153,18 @@
     };
 
     var Dolly = function () {
-        var options, name, src, copy, copyIsArray, clone, target = arguments[0] || {}, i = 1, length = arguments.length, deep = false;
+        var options, src, copy, copyIsArray, clone;
+        var target = arguments[0] || {};
+        var i = 1;
+        var length = arguments.length;
+        var deep = false;
+
         if ( typeof target === "boolean" ) {
             deep = target;
             target = arguments[ i ] || {};
             i++;
         }
-        if ( typeof target !== "object" && !(Object.prototype.toString.call( target ) === '[object Function]') ) {
+        if ( typeof target !== "object" && Object.prototype.toString.call( target ) !== '[object Function]' ) {
             target = {};
         }
         if ( i === length ) {
@@ -162,8 +172,8 @@
             i--;
         }
         for ( ; i < length; i++ ) {
-            if ( (options = arguments[ i ]) != null ) {
-                for ( name in options ) {
+            if ( (options = arguments[ i ]) !== null ) {
+                for (var name in options ) {
                     src = target[ name ];
                     copy = options[ name ];
                     if ( target === copy ) {
@@ -178,7 +188,7 @@
                         } else {
                             clone = src && (src.toString()==="[object Object]") ? src : {};
                         }
-                        target[ name ] = Dolly( deep, clone, copy );
+                        target[ name ] = new Dolly( deep, clone, copy );
                     } else if ( copy !== undefined ) {
                         target[ name ] = copy;
                     }
@@ -189,7 +199,7 @@
 
     Furkan.extend = function(args) {
         this.HAPPY--;
-        return Dolly(true,Dolly(true, {}, Furkan),args);
+        return new Dolly(true,Dolly(true, {}, Furkan),args);
     };
 
     return Furkan;
