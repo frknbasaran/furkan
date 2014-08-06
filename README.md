@@ -103,6 +103,7 @@ furki.NAME // "furki"
 
 - [x] Skeleton Construction Design
 - [x] Apply Temporary System
+- [x] Asynchronous module definition Support
 - [ ] **And more fuckin' development processes (best part)**
 
 ## Contributing
