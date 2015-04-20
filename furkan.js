@@ -32,6 +32,8 @@
     Furkan.NAME = "Furkan";
 
     Furkan.ERAY = "fuckin\'";
+    
+    Furkan.AHMET = "hardfuckin\'";
 
     Furkan.YES = 1;
 
@@ -76,7 +78,7 @@
         } else if(tempHappy>0 && tempHappy<4) {
             return this.LIP;
         } else {
-            return BAD_ASS;
+            return this.AHMET;
         }
     };
 
