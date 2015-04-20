@@ -47,7 +47,7 @@
 
     Furkan.HOME = "http://wzzp.in:31";
 
-    Furkan.RELATIONSHIP = "Single";
+    Furkan.RELATIONSHIP = "Çıktığı Var";
 
     Furkan.SELFIE = undefined;
 
