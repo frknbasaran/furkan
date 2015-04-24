@@ -63,7 +63,7 @@ Furkan.mood(); // "fuckin\'" || ":*" || "hi"
 
 ##### status method
 ```javascript
-Furkan.status(); // "Single"
+Furkan.status(); // "Çıktığı Var"
 ```
 
 ##### addSelfie method
