@@ -1,4 +1,4 @@
-![Logo](http://33.media.tumblr.com/8b8da2e0af02249bb6db82ca7574151f/tumblr_mv8lqejz8e1r413h3o1_250.jpg)
+![Logo](http://blog.furkanbasaran.com/assets/favicons/favicon-96x96.png?v=a0cf1ee61c)
 
 <!---
 http://s22.postimg.org/6xx3msko1/super2.png
